@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500;600;900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: flex-start;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+/** form **/
+.form {
+    margin: auto;
+    text-align: center;
+}
+form {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top : 5px;
+    margin-bottom: 30px;
+}
+todo-form {
+    vertical-align: baseline;
+}
+input {
+    text-align: center;
+}
+input::placeholder{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+input[type=text] {
+    border: none;
+    color: white;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    font-size: 40px;
+
+}
+input[type=text]:hover {
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    outline: none;
+}
+input[type=text]:focus {
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    outline: none;
+}
+.login-form {
+    display: flex;
+    align-items: baseline;
+}
+
+/**welcome**/
+#welcome {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 38px;
+}
+#greeting {
+    color: white;
+    font-size: 65px;
+    font-weight: 800;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+.edit_nameBtn {
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: rgba(235, 235, 235, 0.8);
+    color: #121826;
+    border: none;
+    margin-left: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.edit_nameBtn:hover {
+    background-color: rgba(235, 235, 235, 0.6);
+    color: white;
+}
+
+/**clock**/
+#clock {
+    text-align: center;
+    font-size: 130px;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 10px 0 10px 0;
+}
+
+/**background**/
+.my_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/**todo_list**/
+#todo-list {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+#todo-list li span{
+    margin-left: 5px;
+}
+
+#todo-list li {
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.edit_button,
+.delete_button {
+    background-color: rgba(235, 235, 235, 0.8);
+    color: #121826;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10vw;
+}
+.delete_button:hover {
+    background-color: rgba(235, 235, 235, 0.6);
+    color: white;
+}
+.check {
+    display:inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: white;
+    position: relative;
+    top: 4.5px;
+}
+i {
+    vertical-align: middle;
+    pointer-events : none;
+}
+.todo_text{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/**quote**/
+.quote_container {
+    display: flex;
+    justify-content: center;
+}
+#quote {
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgba(235, 235, 235, 0.8);
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+}
+#quote span{
+    color: #121826;
+    font-size: 18px;
+}
+
+/**weather**/
+#weather {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #121826;
+    font-size: 16px;
+    background-color: rgba(235, 235, 235, 0.8);
+    padding: 0px 10px 10px 15px;
+    border-radius: 20px;
+}
+#weather img {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: 0.03em;
+}
