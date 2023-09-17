@@ -18,23 +18,6 @@ function deleteTodo(event) {
     saveToDos();
 }
 
-function doneTodo(event) {
-  // const li = event.target.parentElement;  
-  console.log(e.target);
-  // for (const i in toDos) {
-  //   if (toDos[i].id === parseInt(li.id)) {
-  //     if (toDos[i].is_done === true) {
-  //       event.target.classList.remove("done");
-  //       toDos[i].is_done = false;
-  //     } else {
-  //       event.target.classList.add("done");
-  //       toDos[i].is_done = true;
-  //     }
-  //   }
-  // }
-  // saveToDos();
-}
-
 function paintTodo(newTodo) {
     const li = document.createElement("li");
     li.id = newTodo.id;
@@ -42,7 +25,6 @@ function paintTodo(newTodo) {
     const span = document.createElement("span");
     span.classList.add("todo_text");
     span.innerText = newTodo.text;
-
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete_button");
     deleteBtn.innerHTML = '<i class="far fa-trash-alt fa-lg"></i>'
@@ -52,7 +34,13 @@ function paintTodo(newTodo) {
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("value", "done");
     checkbox.classList.add("check");
-    checkbox.addEventListener("change", doneTodo);
+    checkbox.addEventListener("change", () => {
+        if(checkbox.checked === true){
+          span.style.textDecoration = 'line-through'
+        } else {
+          span.style.textDecoration = ''
+        }
+      });
     
     li.appendChild(checkbox);
     li.appendChild(span);
@@ -67,7 +55,6 @@ function handleToDoSubmit(event) {
     const newTodoObj = {
         text:newTodo,
         id: toDos.length + 1,
-        is_done: false,
     };
     toDos.push(newTodoObj);
     paintTodo(newTodoObj);
@@ -82,5 +69,3 @@ if (savedToDos !== null) {
     toDos = parsedToDos;
     parsedToDos.forEach(paintTodo);   
     }
-
-  
