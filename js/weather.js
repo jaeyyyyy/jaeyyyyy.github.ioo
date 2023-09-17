@@ -1,3 +1,5 @@
+const city = document.querySelector("#weather span:first-child");
+const weather = document.querySelector("#weather span:nth-child(2)");
 const API_KEY = "402df5e305866bedef47297cbf828ce2";
 
 function onGeoOk(position) {
@@ -11,9 +13,8 @@ function onGeoOk(position) {
             const weatherIconCode = data.weather[0].icon;
             const weatherIcon = document.createElement("img");
             weatherIcon.src = `img/icons/${weatherIconCode}.png`;
-            const city = document.querySelector("#weather span:last-child");
             city.innerText = data.name;
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}°C`;
+            weather.innerText = `| ${data.main.temp}°C | ${data.weather[0].main}`;
             weather.appendChild(weatherIcon);
         });
 }
