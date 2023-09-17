@@ -19,20 +19,20 @@ function deleteTodo(event) {
 }
 
 function doneTodo(event) {
-  const li = event.target.parentElement;  
+  // const li = event.target.parentElement;  
   console.log(e.target);
-  for (const i in toDos) {
-    if (toDos[i].id === parseInt(li.id)) {
-      if (toDos[i].is_done === true) {
-        event.target.classList.remove("done");
-        toDos[i].is_done = false;
-      } else {
-        event.target.classList.add("done");
-        toDos[i].is_done = true;
-      }
-    }
-  }
-  saveToDos();
+  // for (const i in toDos) {
+  //   if (toDos[i].id === parseInt(li.id)) {
+  //     if (toDos[i].is_done === true) {
+  //       event.target.classList.remove("done");
+  //       toDos[i].is_done = false;
+  //     } else {
+  //       event.target.classList.add("done");
+  //       toDos[i].is_done = true;
+  //     }
+  //   }
+  // }
+  // saveToDos();
 }
 
 function paintTodo(newTodo) {
