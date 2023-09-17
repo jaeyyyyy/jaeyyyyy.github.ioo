@@ -18,12 +18,6 @@ function deleteTodo(event) {
     saveToDos();
 }
 
-// function editTodo() {
-//   const currentTodos = toDos;
-//   const newTodos = currentTodos.
-//   console.log(toDos);
-// }
-
 function paintTodo(newTodo) {
     const li = document.createElement("li");
     li.id = newTodo.id;
@@ -37,23 +31,19 @@ function paintTodo(newTodo) {
     deleteBtn.innerHTML = '<i class="far fa-trash-alt fa-lg"></i>'
     deleteBtn.addEventListener("click", deleteTodo);
 
-    // const editBtn = document.createElement("button");
-    // editBtn.classList.add("edit_button");
-    // editBtn.innerHTML = '<i class="far fa-trash-alt"></i>'
-    // editBtn.addEventListener("click", editTodo);
-
     const checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("value", "done");
     checkbox.classList.add("check");
     checkbox.addEventListener("change", () => {
         if(checkbox.checked === true){
-          span.style.textDecoration = 'line-through'
+          span.style.textDecoration = 'line-through';
+          event.preventDefault();
         } else {
-          span.style.textDecoration = ''
+          span.style.textDecoration = '';
+          event.preventDefault();
         }
       });
-
     
     li.appendChild(checkbox);
     li.appendChild(span);
