@@ -25,6 +25,7 @@ function paintTodo(newTodo) {
     const span = document.createElement("span");
     span.classList.add("todo_text");
     span.innerText = newTodo.text;
+
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete_button");
     deleteBtn.innerHTML = '<i class="far fa-trash-alt fa-lg"></i>'
