@@ -83,5 +83,4 @@ if (savedToDos !== null) {
     parsedToDos.forEach(paintTodo);   
     }
 
-
   
