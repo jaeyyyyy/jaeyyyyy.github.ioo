@@ -36,12 +36,8 @@ function paintTodo(newTodo) {
     checkbox.setAttribute("value", "done");
     checkbox.classList.add("check");
     checkbox.addEventListener("change", () => {
-        if(checkbox.checked === true){
-          span.style.textDecoration = 'line-through';
-          event.preventDefault();
-        } else {
-          span.style.textDecoration = '';
-          event.preventDefault();
+        if(event.target.className === "li" || event.target.className==="li done") {
+        event.target.classList.toggle("done");
         }
       });
     
