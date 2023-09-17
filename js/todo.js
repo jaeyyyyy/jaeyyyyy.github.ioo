@@ -19,7 +19,8 @@ function deleteTodo(event) {
 }
 
 function doneTodo(event) {
-  const span = event.target.parentElement;
+  const li = event.target.parentElement;  
+  console.log(e.target);
   for (const i in toDos) {
     if (toDos[i].id === parseInt(li.id)) {
       if (toDos[i].is_done === true) {
@@ -54,7 +55,7 @@ function paintTodo(newTodo) {
     checkbox.addEventListener("change", doneTodo);
     
     li.appendChild(checkbox);
-    checkbox.appendChild(span);
+    li.appendChild(span);
     li.appendChild(deleteBtn);
     toDoList.appendChild(li);
 }
