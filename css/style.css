@@ -118,7 +118,6 @@ input[type=text]:focus {
 #todo-list li span{
     margin-left: 5px;
 }
-
 #todo-list li {
     list-style: none;
     color: white;
@@ -127,7 +126,6 @@ input[type=text]:focus {
     justify-content: center;
     margin-bottom: 10px;
 }
-
 .edit_button,
 .delete_button {
     background-color: rgba(235, 235, 235, 0.8);
@@ -157,7 +155,9 @@ i {
 .todo_text{
     font-family: 'Noto Sans KR', sans-serif;
 }
-
+.done {
+    text-decoration: line-through;
+} 
 
 /**quote**/
 .quote_container {
