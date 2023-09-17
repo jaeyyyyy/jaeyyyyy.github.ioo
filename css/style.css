@@ -155,9 +155,6 @@ i {
 .todo_text{
     font-family: 'Noto Sans KR', sans-serif;
 }
-.done {
-    text-decoration: line-through;
-} 
 
 /**quote**/
 .quote_container {
