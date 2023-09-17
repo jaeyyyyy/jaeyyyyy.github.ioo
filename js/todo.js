@@ -83,7 +83,5 @@ if (savedToDos !== null) {
     parsedToDos.forEach(paintTodo);   
     }
 
-editTodo();
-
 
   
