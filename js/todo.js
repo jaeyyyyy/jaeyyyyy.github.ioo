@@ -18,6 +18,22 @@ function deleteTodo(event) {
     saveToDos();
 }
 
+function doneTodo(event) {
+  const li = event.target.parentElement;
+  for (const i in toDos) {
+    if (toDos[i].id === parseInt(tar.id)) {
+      if (toDos[i].is_done === true) {
+        event.target.classList.remove("done");
+        toDos[i].is_done = false;
+      } else {
+        event.target.classList.add("done");
+        toDos[i].is_done = true;
+      }
+    }
+  }
+  saveToDos();
+}
+
 function paintTodo(newTodo) {
     const li = document.createElement("li");
     li.id = newTodo.id;
@@ -35,11 +51,7 @@ function paintTodo(newTodo) {
     checkbox.setAttribute("type", "checkbox");
     checkbox.setAttribute("value", "done");
     checkbox.classList.add("check");
-    checkbox.addEventListener("change", () => {
-        if(event.target.className === "li" || event.target.className==="li done") {
-        event.target.classList.toggle("done");
-        }
-      });
+    checkbox.addEventListener("change", doneTodo);
     
     li.appendChild(checkbox);
     li.appendChild(span);
@@ -54,6 +66,7 @@ function handleToDoSubmit(event) {
     const newTodoObj = {
         text:newTodo,
         id: toDos.length + 1,
+        is_done: false,
     };
     toDos.push(newTodoObj);
     paintTodo(newTodoObj);
